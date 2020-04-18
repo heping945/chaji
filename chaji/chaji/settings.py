@@ -86,7 +86,7 @@ DATABASES = {
         'PASSWORD': '123',
         'HOST': 'localhost',
         'PORT': '3306',
-        'OPTIONS': {'init_command': 'SET default_storage_engine=INNODB;', 'charset': 'utf8mb4'}
+        'OPTIONS': {'init_command': 'SET default_storage_engine=INNODB;', 'charset': 'utf8',}
     }
 }
 
@@ -175,7 +175,6 @@ JWT_AUTH = {
     'JWT_ALLOW_REFRESH': True,
     'JWT_RESPONSE_PAYLOAD_HANDLER': 'user.utils.jwt_response_payload_handler',
 }
-
 
 #  认证邮箱登录
 AUTHENTICATION_BACKENDS = (
