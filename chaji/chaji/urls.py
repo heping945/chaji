@@ -14,10 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 
-
-
-
 from rest_framework.documentation import include_docs_urls
+from django.views.generic.base import RedirectView
 
 from django.conf.urls import url, include
 from django.conf import settings
@@ -25,15 +23,9 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
-from django.shortcuts import HttpResponse
-
-
-
-
 urlpatterns = [
-    # url(r'^$', index),
     url(r'^$', TemplateView.as_view(template_name="index.html"), name="index"),
-
+    url(r'^favicon.ico$', RedirectView.as_view(url=r'static/favicon.ico')),
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include('api.urls')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
