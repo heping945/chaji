@@ -31,6 +31,8 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api/docs/', include_docs_urls(title='chaji')),
     url('', include('social_django.urls', namespace='social'))  # 第三方登录
+
+
 ]
 
 if settings.DEBUG:
