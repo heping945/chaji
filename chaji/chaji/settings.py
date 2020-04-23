@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'dj*#elwdfzks4b+tl^o6b-g=zmm8*zor#e)(_d7$%pogkr!0g$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 # APPEND_SLASH = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '106.15.35.189', '.chaji.site']
@@ -192,3 +192,17 @@ AUTHENTICATION_BACKENDS = (
     'social_core.backends.weibo.WeiboOAuth2',  # 使用微博登录
     'django.contrib.auth.backends.ModelBackend',  # 指定django的ModelBackend类
 )
+
+
+
+# 邮箱
+
+EMAILPASSWORD = os.environ.get('EMAILPWD','')
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = False
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'zhp602013597@163.com'
+EMAIL_HOST_PASSWORD = EMAILPASSWORD
+DEFAULT_FROM_EMAIL = 'zhp602013597@163.com'
