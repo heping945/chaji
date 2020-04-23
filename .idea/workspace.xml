@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db0a51a9-41d9-49d4-b979-7eb84b976095" name="Default Changelist" comment="screenwidth更新">
+    <list default="true" id="db0a51a9-41d9-49d4-b979-7eb84b976095" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/mysite-b.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mysite-b.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,7 +16,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chaji/chaji/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="1691">
               <caret line="89" column="5" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
             </state>
           </provider>
@@ -24,7 +25,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chaji/chaji/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
+            <state relative-caret-position="380">
               <caret line="27" selection-start-line="27" selection-end-line="27" selection-end-column="75" />
               <folding>
                 <element signature="e#640#698#0" expanded="true" />
@@ -33,12 +34,59 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chaji/api/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="15" column="63" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chaji/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/chaji/info/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chaji/info/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="47">
+              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chaji/user/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="608">
+              <caret line="40" selection-start-line="40" selection-end-line="60" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,6 +96,10 @@
       <list>
         <option value="$PROJECT_DIR$/chaji/chaji/settings.py" />
         <option value="$PROJECT_DIR$/chaji/chaji/urls.py" />
+        <option value="$PROJECT_DIR$/chaji/templates/index.html" />
+        <option value="$PROJECT_DIR$/chaji/api/urls.py" />
+        <option value="$PROJECT_DIR$/chaji/info/utils.py" />
+        <option value="$PROJECT_DIR$/chaji/info/views.py" />
       </list>
     </option>
   </component>
@@ -81,7 +133,13 @@
               <item name="mysite-b" type="b2602c69:ProjectViewProjectNode" />
               <item name="mysite-b" type="462c0819:PsiDirectoryNode" />
               <item name="chaji" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mysite-b" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysite-b" type="462c0819:PsiDirectoryNode" />
+              <item name="chaji" type="462c0819:PsiDirectoryNode" />
+              <item name="info" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -220,7 +278,8 @@
       <workItem from="1587365898868" duration="843000" />
       <workItem from="1587395533372" duration="1396000" />
       <workItem from="1587442732857" duration="3823000" />
-      <workItem from="1587531162789" duration="4613000" />
+      <workItem from="1587531162789" duration="6875000" />
+      <workItem from="1587625797477" duration="3324000" />
     </task>
     <task id="LOCAL-00001" summary="..">
       <created>1587229298569</created>
@@ -313,11 +372,25 @@
       <option name="project" value="LOCAL" />
       <updated>1587577696718</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="..">
+      <created>1587578442254</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1587578442254</updated>
+    </task>
+    <task id="LOCAL-00015" summary="reqtest">
+      <created>1587631297107</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1587631297107</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17924000" />
+    <option name="totallyTimeSpent" value="23510000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -330,14 +403,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18766756" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19034852" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24787535" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26628897" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -346,7 +418,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3512748" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.29886687" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -359,15 +431,16 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value=".." />
     <MESSAGE value="..." />
     <MESSAGE value="bug修复" />
     <MESSAGE value="测试" />
     <MESSAGE value="screenwidth更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="screenwidth更新" />
+    <MESSAGE value=".." />
+    <MESSAGE value="reqtest" />
+    <option name="LAST_COMMIT_MESSAGE" value="reqtest" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/mysite_b$chaji.coverage" NAME="chaji Coverage Results" MODIFIED="1587531437733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chaji" />
+    <SUITE FILE_PATH="coverage/mysite_b$chaji.coverage" NAME="chaji Coverage Results" MODIFIED="1587631424158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chaji" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/chaji/static/js/app.13b46d9b.js" />
@@ -376,25 +449,30 @@
     <entry file="file://$PROJECT_DIR$/chaji/media/avatars/default.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/chaji/static/js/app.90a359f2.js" />
+    <entry file="file://$PROJECT_DIR$/chaji/static/js/app.31e4275e.js" />
+    <entry file="file://$PROJECT_DIR$/chaji/static/js/app.a907fb80.js" />
+    <entry file="file://$PROJECT_DIR$/chaji/static/js/app.43044bcf.js" />
+    <entry file="file://$PROJECT_DIR$/chaji/static/js/app.e6091a80.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chaji/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chaji/chaji/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="1691">
           <caret line="89" column="5" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chaji/static/js/app.90a359f2.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chaji/static/js/app.31e4275e.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chaji/static/js/app.a907fb80.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/chaji/chaji/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
+        <state relative-caret-position="380">
           <caret line="27" selection-start-line="27" selection-end-line="27" selection-end-column="75" />
           <folding>
             <element signature="e#640#698#0" expanded="true" />
@@ -402,14 +480,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chaji/static/js/app.43044bcf.js">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/chaji/api/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="15" column="63" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chaji/static/js/app.e6091a80.js">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/chaji/user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="40" selection-start-line="40" selection-end-line="60" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chaji/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/chaji/info/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chaji/info/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
