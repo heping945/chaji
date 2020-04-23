@@ -17,7 +17,6 @@ router.register(r'reqinfo',RequestInfoViewset,basename='reqinfo')
 
 urlpatterns = [
     url(r'^', include(router.urls)),
-    # url(r'^useractivities/(?P<user>\w+)/$', UserActivities.as_view({'get':'retrieve'})),
     # 登录接口
     url(r'^login/$', obtain_jwt_token),
     # jwt token刷新延长登录接口
