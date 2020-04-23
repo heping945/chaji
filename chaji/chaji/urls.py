@@ -13,7 +13,6 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-
 from rest_framework.documentation import include_docs_urls
 from django.views.generic.base import RedirectView
 
@@ -22,6 +21,9 @@ from django.conf import settings
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
+
+
+
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name="index.html"), name="index"),
