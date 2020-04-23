@@ -1,6 +1,7 @@
 import  random
 import string
 import os
+import time
 
 from django.conf import settings
 from django.core.mail import send_mail
@@ -31,3 +32,10 @@ def send_email():
     content = '你好啊'
     res = send_mail(title, content, settings.DEFAULT_FROM_EMAIL,
                     sendToEmail, html_message=msg)
+
+
+@app.task
+def add(x,y):
+    time.sleep(3)
+    print(x+y)
+    return x+y

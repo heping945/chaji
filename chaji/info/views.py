@@ -5,13 +5,12 @@ from django_redis import get_redis_connection
 
 from .utils import ADDREQ,ShortUrl
 from utils.func import IpRecord
-from celerytask.tasks import send_email
+from celerytask.tasks import send_email,add
 
 ip = get_redis_connection('chaji')
 dwz = get_redis_connection('chaji')
 
 s = ShortUrl(dwz)
-
 
 
 
@@ -82,3 +81,11 @@ class CeleryViewset(viewsets.ViewSet):
     def list(self, request, **kwargs):
         send_email.delay()
         return Response('ok')
+    def retrieve(self, request, *args, **kwargs):
+        pk = kwargs.get('pk')
+        add.delay(1,2)
+        d = {
+            'msg':'success',
+            'pk':pk
+        }
+        return Response(d)
