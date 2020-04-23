@@ -17,6 +17,7 @@ router.register(r'reqinfo',RequestInfoViewset,basename='reqinfo')
 router.register(r'ipinfo',GetIPViewset,basename='ipinfo')
 router.register(r'dwz',DwzViewset,basename='dwz')
 
+
 urlpatterns = [
     url(r'^', include(router.urls)),
     # 登录接口
