@@ -18,7 +18,7 @@ def generate_code(n=6):
     _str = string.ascii_letters+string.digits
     return ''.join(random.sample(_str,n))
 
-@app.task
+@app.task(time_limit=10)
 def send_email():
     code = generate_code()
     msg = f'''
