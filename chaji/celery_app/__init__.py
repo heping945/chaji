@@ -19,21 +19,21 @@ app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 app.conf.update(
     CELERYBEAT_SCHEDULE={
         'sum-task': {
-            'task': 'celery_app.add',
+            'task': 'celery_app.tasks.add',
             'schedule': timedelta(seconds=20),
             'args': (5, 3)
         },
-        'send-email': {
-            'task': 'info.tasks.send_email',
-            'schedule': crontab(minute='*/2'),
-            'args': ()
-        }
+        # 'send-email': {
+        #     'task': 'info.tasks.send_email',
+        #     'schedule': crontab(minute='*/2'),
+        #     'args': ()
+        # }
     }
 )
 
 
-@app.task
-def add(x, y):
-    time.sleep(3)
-    print(x + y)
-    return x + y
+# @app.task
+# def add(x, y):
+#     time.sleep(3)
+#     print(x + y)
+#     return x + y

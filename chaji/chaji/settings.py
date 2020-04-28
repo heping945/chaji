@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'dj*#elwdfzks4b+tl^o6b-g=zmm8*zor#e)(_d7$%pogkr!0g$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 # APPEND_SLASH = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '106.15.35.189', '.chaji.site']

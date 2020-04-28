@@ -5,3 +5,9 @@ task_serializer = 'json'
 result_serializer = 'json'
 accept_content = ['json']
 timezone = 'Asia/Shanghai'
+
+
+
+imports = [
+    'celery_app.tasks.add',
+]

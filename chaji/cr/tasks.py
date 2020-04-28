@@ -3,7 +3,7 @@ from utils.apiconfig import client
 
 
 @app.task
-def CRHandle(method,imageContent,*args):
+def crhandle(method,imageContent,*args):
     func = getattr(client, method)
     res = func(imageContent,*args,)
     return res

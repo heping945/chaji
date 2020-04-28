@@ -3,7 +3,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from celery.result import AsyncResult
 
-from .tasks import CRHandle
+from .tasks import crhandle
 from utils.apiconfig import client
 
 def validate_method(cls,method):
@@ -27,10 +27,10 @@ class CRAIViewset(viewsets.ViewSet):
         if image and limit_image_size(image.size) or url:
             if validate_method(client,handletype):
                 if url:
-                    res = CRHandle.delay(handletype, url,handlearg )
+                    res = crhandle.delay(handletype, url,handlearg )
                 else:
                     content = image.read()
-                    res = CRHandle.delay(handletype,content,handlearg)
+                    res = crhandle.delay(handletype,content,handlearg)
                 d = {
                     'msg': 'success',
                     'code': 1001,

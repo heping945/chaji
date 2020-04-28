@@ -7,7 +7,7 @@ from celery.result import AsyncResult
 from .utils import ADDREQ,ShortUrl
 from .tasks import send_email
 from utils.func import IpRecord
-from celery_app import add
+from celery_app.tasks import add
 
 ip = get_redis_connection('chaji')
 dwz = get_redis_connection('chaji')
