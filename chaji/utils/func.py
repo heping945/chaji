@@ -1,5 +1,7 @@
 from datetime import date
 
+
+
 class IpRecord:
     def __init__(self, ipdb):
         self.ipdb = ipdb
@@ -13,3 +15,5 @@ class IpRecord:
     def get(self,prefix='CJ::IP::'):
         key = f'{prefix}{str(date.today())}'
         return self.ipdb.smembers(key)
+
+

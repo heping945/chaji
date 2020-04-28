@@ -11,6 +11,8 @@ ADDREQ =(
     'SERVER_NAME',
 )
 
+
+
 class ShortUrl:
     ID_COUNTER = "ShortyUrl::id_counter"
     URL_HASH = "ShortyUrl::url_hash"

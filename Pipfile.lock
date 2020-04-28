@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "93fe931d7fd537f085bded434f56c7a1e7da515a4c43c505f6f1712ead03d461"
+            "sha256": "e00080d165dfc0ca9d05fe31e51bdfdcb5a53f2fc4478c578a6cb45d2ceeacb3"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -28,6 +28,13 @@
                 "sha256:37812d863c9ad3e35c0734c42e0bf0320ce8c3bed82cd20ad54cb34d158157ba"
             ],
             "version": "==0.3.3"
+        },
+        "baidu-aip": {
+            "hashes": [
+                "sha256:c7f03c671027dcae1ccaa60631ec5811c8e9e51e2ebb505a748a213d0f0b5b88"
+            ],
+            "index": "pypi",
+            "version": "==2.2.18.0"
         },
         "billiard": {
             "hashes": [

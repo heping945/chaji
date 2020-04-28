@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'user',
+    'info',
+    'cr',
 
     'rest_framework',
     'corsheaders',
@@ -200,9 +202,9 @@ AUTHENTICATION_BACKENDS = (
 EMAILPASSWORD = os.environ.get('EMAILPWD','')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS = True
+EMAIL_USE_TLS = False
 EMAIL_HOST = 'smtp.163.com'
-EMAIL_PORT = 465
+EMAIL_PORT = 25
 EMAIL_HOST_USER = 'zhp602013597@163.com'
 EMAIL_HOST_PASSWORD = EMAILPASSWORD
 DEFAULT_FROM_EMAIL = 'zhp602013597@163.com'

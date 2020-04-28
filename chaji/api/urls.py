@@ -6,6 +6,7 @@ from rest_framework_jwt.views import refresh_jwt_token
 
 from user.views import UserViewset, UserPasswordViewset,UserAvatarViewset,UserinfoViewset
 from info.views import RequestInfoViewset,GetIPViewset,DwzViewset,CeleryViewset
+from cr.views import CRAIViewset
 
 router = DefaultRouter()
 
@@ -17,6 +18,7 @@ router.register(r'reqinfo',RequestInfoViewset,basename='reqinfo')
 router.register(r'ipinfo',GetIPViewset,basename='ipinfo')
 router.register(r'dwz',DwzViewset,basename='dwz')
 router.register(r'cv',CeleryViewset,basename='cv')
+router.register(r'cr',CRAIViewset,basename='cr')
 
 
 urlpatterns = [

@@ -1,19 +1,12 @@
-import  random
+import random
 import string
-import os
-import time
 
-from django.conf import settings
 from django.core.mail import send_mail
-from celery import Celery
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "chaji.settings")
-
-app = Celery('tasks', broker='redis://127.0.0.1/7',backend='redis://127.0.0.1/8')
+from celery_app import app
+from django.conf import settings
 
 
-
-# 生成n位随机码
 def generate_code(n=6):
     _str = string.ascii_letters+string.digits
     return ''.join(random.sample(_str,n))
@@ -30,12 +23,5 @@ def send_email():
     sendToEmail = ('602013597@qq.com',)
     title = 'hello world'
     content = '你好啊'
-    res = send_mail(title, content, settings.DEFAULT_FROM_EMAIL,
+    send_mail(title, content, settings.DEFAULT_FROM_EMAIL,
                     sendToEmail, html_message=msg)
-
-
-@app.task
-def add(x,y):
-    time.sleep(3)
-    print(x+y)
-    return x+y

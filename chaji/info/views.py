@@ -2,15 +2,19 @@ from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from django_redis import get_redis_connection
+from celery.result import AsyncResult
 
 from .utils import ADDREQ,ShortUrl
+from .tasks import send_email
 from utils.func import IpRecord
-from celerytask.tasks import send_email,add
+from celery_app import add
 
 ip = get_redis_connection('chaji')
 dwz = get_redis_connection('chaji')
 
 s = ShortUrl(dwz)
+
+
 
 
 
@@ -42,7 +46,7 @@ class GetIPViewset(viewsets.ViewSet):
         else:
             data = {
                 'result': [],
-                'msg': 'failer no data',
+                'msg': 'failure no data',
                 'code': '1004'
             }
         return Response(data)
@@ -79,13 +83,21 @@ class DwzViewset(viewsets.ViewSet):
 
 class CeleryViewset(viewsets.ViewSet):
     def list(self, request, **kwargs):
-        send_email.delay()
+        res_id = send_email.delay()
+        print(res_id)
+        res = AsyncResult('2bc77cb5-53f2-4c7e-b77e-6f5e82575ddb')
+        if res_id.successful():
+            print(res.get())
+        else:
+            print('failure')
         return Response('ok')
     def retrieve(self, request, *args, **kwargs):
         pk = kwargs.get('pk')
-        add.delay(1,2)
+        res_id=add.delay(1,2)
         d = {
             'msg':'success',
-            'pk':pk
+            'pk':pk,
+            # 'res_id':res_id,
         }
         return Response(d)
+
