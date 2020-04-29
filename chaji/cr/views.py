@@ -51,6 +51,7 @@ class CRAIViewset(viewsets.ViewSet):
         taskId=kwargs.get('taskId',None)
         if taskId:
             res = AsyncResult(taskId)
+            print(res.status)
             if res.successful():
                 data = res.get()
                 d = {
