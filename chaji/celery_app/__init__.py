@@ -1,5 +1,4 @@
 import os
-import time
 from datetime import timedelta
 
 from celery.schedules import crontab
@@ -23,17 +22,11 @@ app.conf.update(
             'schedule': timedelta(seconds=20),
             'args': (5, 3)
         },
-        # 'send-email': {
-        #     'task': 'info.tasks.send_email',
-        #     'schedule': crontab(minute='*/2'),
-        #     'args': ()
-        # }
+        'send-email': {
+            'task': 'info.tasks.send_email',
+            'schedule': crontab(minute='*/2'),
+            'args': ()
+        }
     }
 )
 
-
-# @app.task
-# def add(x, y):
-#     time.sleep(3)
-#     print(x + y)
-#     return x + y

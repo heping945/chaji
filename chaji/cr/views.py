@@ -10,6 +10,7 @@ def validate_method(cls,method):
     return hasattr(cls,method)
 
 LIMIT_IMAGE_SIZE = 1024*1024*5  # 最大图片尺寸
+DEFAULT_IMAGE_MODE = 'basicGeneral'
 
 def limit_image_size(size,base=LIMIT_IMAGE_SIZE):
     return size < base
@@ -20,10 +21,12 @@ class CRAIViewset(viewsets.ViewSet):
     def create(self,*args,**kwargs):
         image = self.request.data.get('image')
         url = self.request.data.get('url')
+        print(image,url)
         query_params = self.request.query_params
-        handletype = query_params.get('type')       # 处理类型
-        handlearg = query_params.get('arg','')         # 参数
-        print(handlearg)
+        print(query_params)
+        handletype = query_params.get('type')                   # 处理类型
+        handlearg = query_params.get('arg',)                    # 参数
+        handletype = handletype or DEFAULT_IMAGE_MODE           # 如果前端传入了空值就设置默认mode
         if image and limit_image_size(image.size) or url:
             if validate_method(client,handletype):
                 if url:
@@ -49,14 +52,16 @@ class CRAIViewset(viewsets.ViewSet):
         if taskId:
             res = AsyncResult(taskId)
             if res.successful():
-                print(res.get())
-                print('success')
+                data = res.get()
+                d = {
+                    'msg': 'success',
+                    'code': 1001,
+                    'data': data
+                }
             else:
-                print('failure')
-        d = {
-            'msg':'success',
-            'code':1001,
-            'data':taskId
-
-        }
+                d = {
+                    'msg':'failure',
+                    'code':1004,
+                    'data':None
+                }
         return Response(d)
