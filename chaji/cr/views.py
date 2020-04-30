@@ -49,6 +49,7 @@ class CRAIViewset(viewsets.ViewSet):
 
     def retrieve(self,*args,**kwargs):
         taskId=kwargs.get('taskId',None)
+        print(taskId)
         if taskId:
             res = AsyncResult(taskId)
             print(res.status)
